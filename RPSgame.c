@@ -1,12 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-int main()
+void process(int userInput, int compInput)
 {
-    int userInput, compInput;
-    printf("Enter 0 for Rock, 1 for Paper, 2 for Scissors, 9 to exit: ");
-    scanf("%d", &userInput);
-
     compInput = rand() % 3;
     if (userInput == compInput)
     {
@@ -32,6 +27,13 @@ int main()
     {
         printf("You Win!\n");
     }
+}
+int main()
+{
+    int userInput, compInput;
+    printf("Enter 0 for Rock, 1 for Paper, 2 for Scissors, 9 to exit: ");
+    scanf("%d", &userInput);
+    process(userInput, compInput);
     if (userInput == 9)
     {
         return 0;
